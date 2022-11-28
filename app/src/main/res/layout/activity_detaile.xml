@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.DetaileActivity">
+
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/detaile_activity_appbar"
+        android:layout_width="match_parent"
+        android:layout_height="300dp">
+
+
+        <com.google.android.material.appbar.CollapsingToolbarLayout
+            android:id="@+id/collapsBar_main"
+            app:contentScrim="?colorPrimary"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed">
+
+            <ImageView
+                android:id="@+id/detaile_activity_image"
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                android:scaleType="fitXY" />
+
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/detaile_activity_toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                app:layout_collapseMode="pin" />
+
+
+        </com.google.android.material.appbar.CollapsingToolbarLayout>
+
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+
+    <androidx.core.widget.NestedScrollView
+
+        android:id="@+id/detaile_activity_scrollview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="16dp"
+            android:orientation="vertical">
+
+
+            <TextView
+                android:id="@+id/detail_activity_title"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="title"
+                android:textColor="@color/black"
+                android:textSize="45sp" />
+
+
+            <TextView
+                android:textSize="20sp"
+                android:id="@+id/detail_activity_detail_txt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+
+        </LinearLayout>
+
+
+    </androidx.core.widget.NestedScrollView>
+
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab_main"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="32dp"
+        android:src="@drawable/global"
+        app:fabSize="auto"
+        app:layout_anchor="@id/detaile_activity_appbar"
+        app:layout_anchorGravity="bottom|end" />
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
