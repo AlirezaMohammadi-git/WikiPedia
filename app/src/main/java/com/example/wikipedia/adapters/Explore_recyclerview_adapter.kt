@@ -1,10 +1,10 @@
 package com.example.wikipedia.adapters
 
-import android.annotation.SuppressLint
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
+import com.example.wikipedia.Utils.dpToPx
 import com.example.wikipedia.databinding.ExploreItemBinding
 import com.example.wikipedia.wiki_data
 import jp.wasabeef.glide.transformations.RoundedCornersTransformation
@@ -46,15 +46,20 @@ class Explore_recyclerview_adapter(val data: List<wiki_data>, val explore_events
     }
 
     override fun onBindViewHolder(holder: viewholder, position: Int) {
-
         val item = wiki_data(
             data[position].Title,
             data[position].SubTitle,
             data[position].imgURL,
             data[position].topic_URL
         )
-
         holder.bind_data(item)
+
+        //adding 16dp to last item
+        if (position == data.size - 1) {
+            val layoutParams = holder.itemView.layoutParams as RecyclerView.LayoutParams
+            layoutParams.bottomMargin = 16.dpToPx()
+            holder.itemView.layoutParams = layoutParams
+        }
     }
 
     override fun getItemCount(): Int {
@@ -65,6 +70,4 @@ class Explore_recyclerview_adapter(val data: List<wiki_data>, val explore_events
     interface Explore_events {
         fun cardview_clickListener(wikiData: wiki_data)
     }
-
-
 }
