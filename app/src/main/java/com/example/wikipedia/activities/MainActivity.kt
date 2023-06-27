@@ -113,11 +113,13 @@ class MainActivity : AppCompatActivity() {
                         dialog.dismiss()
                     }
                     dialog.show()
-
-
                 }
-                R.id.menu_Open_Wikipedia ->{
+                R.id.visit_wikiPedia ->{
                     val intent = Intent(Intent.ACTION_VIEW , Uri.parse( "https://www.wikipedia.org/" ))
+                    startActivity(intent)
+                }
+                R.id.visit_wikiMedia ->{
+                    val intent = Intent(Intent.ACTION_VIEW , Uri.parse( "https://www.wikimedia.org/" ))
                     startActivity(intent)
                 }
                 R.id.menu_photographer ->{

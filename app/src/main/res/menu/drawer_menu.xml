@@ -1,13 +1,48 @@
 <?xml version="1.0" encoding="utf-8"?>
-<menu xmlns:tools="http://schemas.android.com/tools"
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     tools:ignore="HardcodedText">
 
-    <item android:id="@+id/menu_writer" android:title="Be a writer" />
-    <item android:id="@+id/menu_photographer" android:title="Be a photographer" />
-    <item android:id="@+id/menu_trends" android:title="Trends" android:checkable="true" />
-    <item android:id="@+id/menu_Explore" android:title="Explore" android:checkable="true"/>
-    <item android:id="@+id/menu_Open_Wikipedia" android:title="Open Wikipedia online" />
-    <item android:id="@+id/menu_about" android:title="About" />
+    <item
+        android:id="@+id/menu_writer"
+        android:title="Be a writer"
+        android:icon="@drawable/write"/>
+    <item
+        android:icon="@drawable/photo_grapher"
+        android:id="@+id/menu_photographer"
+        android:title="Be a photographer" />
+    <item
+        android:icon="@drawable/trends"
+        android:id="@+id/menu_trends"
+        android:checkable="false"
+        android:title="Trends" />
+    <item
+        android:icon="@drawable/explore"
+        android:id="@+id/menu_Explore"
+        android:checkable="true"
+        android:title="Explore" />
+    <item
+        android:icon="@drawable/info"
+        android:id="@+id/menu_about"
+        android:title="About" />
+    <group android:id="@+id/wiki_links">
+
+        <item
+            android:id="@+id/title_web"
+            android:enabled="false"
+            android:title="Out Websites" />
+
+        <item
+            android:icon="@drawable/wikipedia"
+            android:id="@+id/visit_wikiPedia"
+            android:title="visit Wikipedia" />
+        <item
+            android:icon="@drawable/wikimedia"
+            android:id="@+id/visit_wikiMedia"
+            android:title="visit Wikimedia" />
+
+    </group>
+
 
 </menu>
